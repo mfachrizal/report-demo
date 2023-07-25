@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93297c11-0ff8-4398-9ed4-dbeb83ad0d50">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="Dataset1" uuid="a96363d9-2512-40c6-b1ed-5f00e2989961">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="_THIS" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="IMAGE_URL" class="java.lang.String"/>
+	<parameter name="LEGEND" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="460" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="10" y="10" width="200" height="200" uuid="3c4b708c-9562-4513-ad96-5286158a1005"/>
+				<imageExpression><![CDATA[$P{IMAGE_URL}]]></imageExpression>
+			</image>
+			<componentElement>
+				<reportElement x="220" y="10" width="170" height="30" uuid="1da42ba8-4c4b-45a7-99b5-a1d57b4ba487"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="203f0578-4fde-4797-818e-46a3d8124ac0">
+						<dataSourceExpression><![CDATA[$P{LEGEND}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="30" width="170">
+						<textField>
+							<reportElement x="0" y="0" width="170" height="30" uuid="fdbad558-e8a8-4a8b-9d7e-60da91b741a6"/>
+							<textFieldExpression><![CDATA[$F{_THIS}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</title>
+</jasperReport>
